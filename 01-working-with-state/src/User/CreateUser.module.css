@@ -1,0 +1,10 @@
+.CreateUser {
+  margin-bottom: 25px;
+}
+.CreateUser label {
+  display: block;
+}
+.CreateUser input {
+  width: 80%;
+  margin-bottom: 10px;
+}

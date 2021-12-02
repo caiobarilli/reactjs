@@ -1,0 +1,15 @@
+.ListData {
+  padding: 1%;
+  margin: 0 auto;
+  max-width: 680px;
+  height: 150px;
+  max-height: 150px;
+  background: rebeccapurple;
+  color: white;
+  overflow: scroll;
+  overflow-x: hidden;
+  border: 4px solid rebeccapurple;
+}
+.ListData p {
+  margin: 0;
+}

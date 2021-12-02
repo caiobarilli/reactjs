@@ -1,0 +1,11 @@
+form {
+  margin: 0 auto;
+  max-width: 680px;
+}
+label {
+  font-size: 1.3em;
+  line-height: 1.5em;
+}
+.btn {
+  margin: 2% 0;
+}

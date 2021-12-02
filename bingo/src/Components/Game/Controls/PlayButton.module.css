@@ -1,0 +1,111 @@
+.PlayButton {
+  display: inline-block;
+  height: 96px;
+  margin: 10px 5px 25px;
+  position: relative;
+  margin-bottom: 35px;
+}
+
+.PlayButton::after {
+  content: "";
+  background-color: #e4e2e2;
+  border-radius: 50%;
+  height: 70px;
+  width: 130px;
+  position: absolute;
+  z-index: -2;
+  top: 50px;
+  left: -11px;
+}
+
+.PlayButton::before {
+  content: "";
+  background-color: #aaa9a9;
+  border-radius: 50%;
+  height: 80px;
+  width: 150px;
+  position: absolute;
+  z-index: -3;
+  top: 49px;
+  left: -22px;
+  transform: skew(167deg, 21deg) scale(1) rotate(-24deg);
+}
+
+.PlayButton button {
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  background-color: #ff322b;
+  display: block;
+  position: relative;
+  height: 70px;
+  width: 100px;
+  box-shadow: inset 0 1px 0 #ff322b, 0 5px 0 #911600;
+  border: 1px solid transparent;
+  border-radius: 50%;
+}
+
+.PlayButton button strong {
+  position: absolute;
+  top: 22px;
+  left: -2px;
+  width: 100%;
+  transform: skew(-40deg, 20deg) scale(1.2) rotate(360deg);
+  user-select: none;
+}
+
+.PlayButton button:active {
+  top: 12px;
+}
+
+.PlayButton button::before {
+  content: "";
+  background-color: transparent;
+  height: 60px;
+  width: 93px;
+  position: absolute;
+  z-index: 0;
+  border: 1px solid #911600;
+  border-radius: 50%;
+  top: 0;
+  left: 2px;
+}
+
+.PlayButton button::after {
+  content: "";
+  background-color: #911600;
+  height: 65px;
+  width: 100px;
+  position: absolute;
+  border-radius: 20% 20% 50% 50%;
+  margin: 0;
+  left: -1px;
+  z-index: -1;
+  top: 30px;
+}
+
+.PlayButton button:active::after {
+  top: 18px;
+}
+
+.PlayButton button:disabled {
+  background: rgb(163, 163, 163);
+  top: 20px;
+  box-shadow: inset 0 1px 0 rgb(163, 163, 163), 0 5px 0 rgb(163, 163, 163);
+}
+
+.PlayButton button:disabled::before {
+  background: rgb(163, 163, 163);
+  border: 1px solid rgb(223, 220, 220);
+}
+
+.PlayButton button:disabled::after {
+  background: rgb(163, 163, 163);
+  top: 18px;
+}
+
+.PlayButton button:disabled strong {
+  color: rgb(163, 163, 163);
+}

@@ -1,0 +1,32 @@
+.display {
+  height: 250px;
+  width: 200px;
+  background: #fff3d0;
+  padding: 6px;
+
+  overflow-y: scroll;
+}
+
+.display h4 {
+  margin: 0;
+}
+
+.display p {
+  margin: 0;
+}
+
+.display::-webkit-scrollbar {
+  width: 6px;
+}
+
+.display::-webkit-scrollbar-track {
+  background: #ecdeb2;
+}
+
+.display::-webkit-scrollbar-thumb {
+  background: #af9a59;
+}
+
+.display::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

@@ -1,0 +1,25 @@
+.checkbox {
+  flex: 1 0 40px;
+}
+
+.checkbox label {
+  height: 20px;
+  color: #ff322b;
+  background: #ffc0cb6e;
+  font-size: 1em;
+  cursor: pointer;
+  position: absolute;
+  user-select: none;
+  line-height: 1em;
+}
+
+.checkbox input[type="checkbox"]:checked + label {
+  background-color: #bbbbbb;
+  color: transparent;
+}
+
+.checkbox input[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+  margin: 0;
+}
