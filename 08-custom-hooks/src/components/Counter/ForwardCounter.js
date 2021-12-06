@@ -1,5 +1,5 @@
-import Card from "./Card";
-import useCounter from "../hooks/use-counter";
+import Card from "../UI/Card";
+import useCounter from "../../hooks/use-counter";
 
 const ForwardCounter = () => {
   const counter = useCounter();
