@@ -7,8 +7,8 @@ const SimpleInput = (props) => {
     value: nameField,
     isValid: nameFieldIsValid,
     hasError: nameInputHasError,
-    inputChangeHandlerValue: onNameChangeHandler,
-    inputBlurHandlerValue: onNameBlurHandler,
+    inputChangeHandler: onNameChangeHandler,
+    inputBlurHandler: onNameBlurHandler,
     reset: resetNameInput,
   } = useInput((value) => value.trim() !== "");
 
@@ -16,8 +16,8 @@ const SimpleInput = (props) => {
     value: emailField,
     isValid: emailFieldIsValid,
     hasError: emailInputHasError,
-    inputChangeHandlerValue: onEmailChangeHandler,
-    inputBlurHandlerValue: onEmailBlurHandler,
+    inputChangeHandler: onEmailChangeHandler,
+    inputBlurHandler: onEmailBlurHandler,
     reset: resetEmailInput,
   } = useInput(
     (value) =>
@@ -75,7 +75,7 @@ const SimpleInput = (props) => {
         />
         {emailInputHasError && (
           <p className="error-text">
-            Digite um email valido, o campo email é obrigatório.{" "}
+            Digite um email válido, o campo email é obrigatório.
           </p>
         )}
       </div>

@@ -7,11 +7,11 @@ const useInput = (validateValue) => {
   const valueIsValid = validateValue(valueField);
   const hasError = !valueIsValid && fieldTouched;
 
-  const inputChangeHandlerValue = (event) => {
+  const inputChangeHandler = (event) => {
     setValueField(event.target.value);
   };
 
-  const inputBlurHandlerValue = () => {
+  const inputBlurHandler = () => {
     setFieldTouched(true);
   };
 
@@ -24,8 +24,8 @@ const useInput = (validateValue) => {
     value: valueField,
     isValid: valueIsValid,
     hasError,
-    inputChangeHandlerValue,
-    inputBlurHandlerValue,
+    inputChangeHandler,
+    inputBlurHandler,
     reset,
   };
 };
