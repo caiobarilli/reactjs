@@ -2,6 +2,11 @@ import useInput from "../hooks/use-input";
 
 const SimpleInput = (props) => {
   let formIsValid = false;
+  const isEmpty = (value) => value.trim() !== "";
+  const isValidEmail = (value) =>
+    value.match(
+      /^(([^<>()[\]\\.,;:\s@\\"]+(\.[^<>()[\]\\.,;:\s@\\"]+)*)|(\\".+\\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    );
 
   const {
     value: nameField,
@@ -10,7 +15,7 @@ const SimpleInput = (props) => {
     inputChangeHandler: onNameChangeHandler,
     inputBlurHandler: onNameBlurHandler,
     reset: resetNameInput,
-  } = useInput((value) => value.trim() !== "");
+  } = useInput(isEmpty);
 
   const {
     value: emailField,
@@ -19,13 +24,7 @@ const SimpleInput = (props) => {
     inputChangeHandler: onEmailChangeHandler,
     inputBlurHandler: onEmailBlurHandler,
     reset: resetEmailInput,
-  } = useInput(
-    (value) =>
-      value.trim() !== "" &&
-      value.match(
-        /^(([^<>()[\]\\.,;:\s@\\"]+(\.[^<>()[\]\\.,;:\s@\\"]+)*)|(\\".+\\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-      )
-  );
+  } = useInput(isValidEmail);
 
   if (nameFieldIsValid && emailFieldIsValid) {
     formIsValid = true;
