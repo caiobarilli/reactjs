@@ -21,3 +21,11 @@
   margin: 2rem 0;
   font-weight: bold;
 }
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 5%;
+}
